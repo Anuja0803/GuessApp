@@ -1,9 +1,9 @@
 <?php
 
-if ( isset($_POST['cancel'] ) ) {
-    header("Location: guess.php");
+/*if ( isset($_POST['Cancel'] ) ) {
+    header("Location: index.php");
     return;
-}
+}*/
 
 $salt = 'XyZzy12*_';
 $stored_hash = '1a52e17fa899cf40fb04cfc42e6352f1';  // Pw is php123
@@ -34,7 +34,10 @@ if ( isset($_POST['email']) && isset($_POST['pass']) ) {
 <title>Anuja Nikam Login Page</title>
 </head>
 <body>
-<div class="card-panel teal lighten-2, center-align"><h1>Please Log In</h1></div>
+<div class="container">
+  <div class="card-panel teal lighten-2, center-align">
+    <h1>Please Log In</h1>
+  </div>
 
 <?php
 if ( $failure !== false )
@@ -49,21 +52,21 @@ if ( $failure !== false )
 ?>
 <form method="post" class="form-horizontal">
     <div class="form-group">
-        <h4><label class="control-label col-sm-2" for="email">User name:</label></h4>
+        <h4><label for="email" style="font-size:15px;color:black;padding-left: 30px;">User name:</label></h4>
         <div class="col-sm-3">
             <input class="form-control" type="text" name="email" id="email">
         </div>
     </div>
     <div class="form-group">
-        <h4><label class="control-label col-sm-2" for="pass">Password:</label></h4>
+        <h4><label for="pass" style="font-size:15px;color:black;padding-left: 30px;">Password:</label></h4>
         <div class="col-sm-3">
             <input class="form-control" type="password" name="pass" id="pass">
         </div>
     </div>
     <div class="form-group">
         <div class="col-sm-2 col-sm-offset-2">
-            <input class="btn btn-primary" type="submit" value="Log In">
-            <input class="btn" type="submit" name="logout" value="Cancel">
+            <input class="btn btn-primary" type="submit" value="Log In"><br><br>
+            <a class="btn btn-default, waves-effect waves-light btn" href="index.php">Cancel</i></a>
         </div>
     </div>
 </form>
