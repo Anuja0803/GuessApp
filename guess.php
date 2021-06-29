@@ -15,11 +15,15 @@
 </style>
 </head>
 <body>
+<div class="container">
 <h1>Welcome to my guessing game</h1>
 <form method="post" class="form-horizontal">
-  <label>Guess a number between 1 - 100</label>
-  <input type="text" name="guess"/>
-  <input class="btn btn-default, waves-effect waves-light btn" type="submit" name="submit" value="Guess">
+  <div class="form-group">
+    <label>Guess a number between 1 - 100</label>
+    <input class="form-control" type="text" name="guess"/>
+    <input class="btn btn-default, waves-effect waves-light btn" type="submit" name="submit" value="Guess">
+    <a class="btn btn-default, waves-effect waves-light btn" href="index.php">Log Out</i></a>
+  </div>
 </form>
 <p>
 <?php
@@ -38,8 +42,8 @@ if (isset($_POST['submit'])) {
     echo("Congratulations - You are right");
   }
 }
-
 ?>
 </p>
+</div>
 </body>
 </html>
